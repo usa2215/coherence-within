@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coherence Within</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background: radial-gradient(circle at top center, #0F172A, #1E293B);
+      color: #E0E0E0; /* softer white for paragraphs */
+      font-family: 'Inter', sans-serif;
+    }
+    .glow {
+      text-shadow: 0 0 15px rgba(96,165,250,0.5), 0 0 30px rgba(96,165,250,0.3);
+    }
+    .accent-blue {
+      color: #60A5FA;
+    }
+    .blur-blue {
+      background: radial-gradient(circle, rgba(96,165,250,0.15), transparent);
+      border-radius: 50%;
+      filter: blur(80px);
+      position: absolute;
+      z-index: 0;
+    }
+    .blur-lightblue {
+      background: radial-gradient(circle, rgba(96,165,250,0.12), transparent);
+      border-radius: 50%;
+      filter: blur(70px);
+      position: absolute;
+      z-index: 0;
+    }
+    svg {
+      display: block;
+      margin: 2rem auto;
+      max-width: 600px;
+    }
+    /* Heart pulse animation */
+    .heart-pulse path {
+      stroke-dasharray: 1000;
+      stroke-dashoffset: 1000;
+      animation: pulse 2s ease-in-out infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { stroke-dashoffset: 1000; }
+      50% { stroke-dashoffset: 0; }
+    }
+    /* Brain-wave animation */
+    .brain-wave path {
+      stroke-dasharray: 600;
+      stroke-dashoffset: 600;
+      animation: brainPulse 3s ease-in-out infinite;
+    }
+    @keyframes brainPulse {
+      0%, 100% { stroke-dashoffset: 600; }
+      50% { stroke-dashoffset: 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <section class="relative min-h-screen flex flex-col justify-center items-center text-center px-6 overflow-hidden">
+    <div class="blur-blue top-1/4 left-1/3 w-[500px] h-[500px]"></div>
+    <div class="blur-lightblue bottom-1/4 right-1/4 w-[400px] h-[400px]"></div>
+
+    <h1 class="relative text-5xl font-bold mb-6 glow accent-blue z-10">Find Calm. Release Blocks. Return to Yourself.</h1>
+
+    <!-- Heart Pulse Animation -->
+    <svg class="heart-pulse z-10" viewBox="0 0 600 100" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,50 Q50,30 100,50 T200,50 T300,50 T400,50 T500,50 T600,50" stroke="#60A5FA" stroke-width="3" fill="transparent"/>
+    </svg>
+
+    <p class="relative text-lg max-w-2xl mb-8 z-10">A HeartMath-informed approach to overcoming anxiety, fight-or-flight responses, and emotional blocks. Learn to shift from avoidance and tension into coherence, balance, and inner clarity.</p>
+    <button class="relative bg-blue-400 hover:bg-blue-300 text-white px-6 py-3 rounded-2xl shadow-lg z-10">Start Your Reset</button>
+  </section>
+
+  <!-- Problem Section -->
+  <section class="py-16 px-6 text-center">
+    <h2 class="text-3xl font-semibold mb-6 glow accent-blue">Do You Feel Stuck?</h2>
+    <p class="max-w-2xl mx-auto mb-6">Anxiety, overthinking, and emotional blocks can trigger your fight-or-flight response. You may avoid difficult emotions, feel tension in your body, or struggle to regulate your heart rhythm and emotional state.</p>
+
+    <!-- Nervous System Animation -->
+    <svg class="brain-wave" viewBox="0 0 600 200" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,150 Q50,50 100,150 T200,150 T300,50 T400,150 T500,50 T600,150" stroke="#60A5FA" stroke-width="3" fill="transparent"/>
+      <text x="10" y="180" fill="#E0E0E0">Stress Spikes</text>
+      <text x="400" y="180" fill="#E0E0E0">Coherent State</text>
+    </svg>
+  </section>
+
+  <!-- Solution Section -->
+  <section class="py-16 px-6 text-center">
+    <h2 class="text-3xl font-semibold mb-6 glow accent-blue">A Heart-Centered Approach</h2>
+    <p class="max-w-2xl mx-auto mb-6">Using HeartMath techniques, we help you regulate your nervous system, restore heart-brain coherence, and transform fight-or-flight and avoidance patterns into emotional clarity, calm, and resilience.</p>
+
+    <!-- Animated Heart-Brain Coherence Visualization -->
+    <svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="50" cy="50" r="20" stroke="#60A5FA" stroke-width="3" fill="transparent">
+        <animate attributeName="r" values="20;25;20" dur="2s" repeatCount="indefinite" />
+      </circle>
+      <circle cx="150" cy="50" r="20" stroke="#60A5FA" stroke-width="3" fill="transparent">
+        <animate attributeName="r" values="20;25;20" dur="2s" begin="0.5s" repeatCount="indefinite" />
+      </circle>
+      <line x1="70" y1="50" x2="130" y2="50" stroke="#60A5FA" stroke-width="2">
+        <animate attributeName="stroke-opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite" />
+      </line>
+      <text x="100" y="90" fill="#E0E0E0" text-anchor="middle">Heart ↔ Brain Coherence</text>
+    </svg>
+  </section>
+
+  <!-- How It Works -->
+  <section class="py-16 px-6">
+    <h2 class="text-3xl font-semibold text-center mb-10 glow accent-blue">How It Works</h2>
+    <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+      <div class="p-6 rounded-2xl shadow bg-[#1E293B]">
+        <h3 class="text-xl font-bold mb-3 accent-blue">1. Awareness</h3>
+        <p>Recognize emotional patterns, fight-or-flight triggers, and avoidance tendencies in real time.</p>
+      </div>
+      <div class="p-6 rounded-2xl shadow bg-[#1E293B]">
+        <h3 class="text-xl font-bold mb-3 accent-blue">2. Regulation</h3>
+        <p>Use HeartMath coherence techniques to calm your nervous system and synchronize heart rhythms.</p>
+      </div>
+      <div class="p-6 rounded-2xl shadow bg-[#1E293B]">
+        <h3 class="text-xl font-bold mb-3 accent-blue">3. Release</h3>
+        <p>Break through emotional blocks, shift out of fight-or-flight, and restore balance to body and mind.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="py-16 px-6 text-center">
+    <h2 class="text-3xl font-semibold mb-10 glow accent-blue">Work With Us</h2>
+    <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+      <div class="p-6 rounded-2xl shadow bg-[#1E293B]">
+        <h3 class="text-xl font-bold mb-3 accent-blue">1-on-1 Coaching</h3>
+        <p>Personalized HeartMath-guided support to process anxiety and avoidant patterns.</p>
+      </div>
+      <div class="p-6 rounded-2xl shadow bg-[#1E293B]">
+        <h3 class="text-xl font-bold mb-3 accent-blue">Group Sessions</h3>
+        <p>Guided sessions focused on anxiety relief, heart-brain coherence, and emotional clarity.</p>
+      </div>
+      <div class="p-6 rounded-2xl shadow bg-[#1E293B]">
+        <h3 class="text-xl font-bold mb-3 accent-blue">Workshops</h3>
+        <p>Deep-dive experiences to reset your heart, mind, and body coherence.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-20 text-center">
+    <h2 class="text-3xl font-semibold mb-6 glow accent-blue">You Don’t Have to Stay Stuck</h2>
+    <p class="mb-8">Start building emotional clarity, resilience, and heart-brain coherence today.</p>
+    <button class="bg-blue-400 hover:bg-blue-300 text-white px-6 py-3 rounded-2xl">Book a Session</button>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-6 text-center text-gray-400">
+    © 2026 Coherence Within. All rights reserved.
+  </footer>
+
+</body>
+</html>
